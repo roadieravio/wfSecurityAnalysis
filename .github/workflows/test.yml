@@ -1,0 +1,12 @@
+name: test
+
+on:
+  commit:
+    branches:
+      main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.commits[0]["message"] }}
